@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
+    --primary-color-hue: 252;
     --color-white:hsl(252, 30%, 100%); 
     --color-light:hsl(252, 30%, 95%);
     --color-gray:hsl(252, 15%, 65%);
-    --color-primary:hsl(252, 75%, 60%);
+    --color-primary:hsl(var(--primary-color-hue), 75%, 60%);
     --color-secondary:hsl(252, 100%, 90%);
     --color-success:hsl(120, 95%, 65%);
     --color-danger:hsl(0, 95%, 65%);
@@ -478,6 +479,7 @@ main .container .right {
     border-radius: var(--card-boarder-radius);
     width: 50%;
     /* display: none; */
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 .customize-theme .font_size {
     margin-top: 5rem;
@@ -605,6 +607,9 @@ main .container .right {
     .left .btn {
         display: none;
     }
+    .customize-theme .card {
+        width: 92vw;
+    }
 }
 @media screen and (max-width:992px) {
     nav .search-bar {
@@ -639,5 +644,8 @@ main .container .right {
     }
     main .container .right {
         display: none;
+    }
+    .customize-theme .card {
+        width: 92vw;
     }
 }
